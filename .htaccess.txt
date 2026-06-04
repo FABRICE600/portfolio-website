@@ -1,0 +1,23 @@
+# Enable rewrite engine
+RewriteEngine On
+
+# Set default character set
+AddDefaultCharset UTF-8
+
+# Prevent directory listing
+Options -Indexes
+
+# Protect sensitive files
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# PHP settings
+php_value upload_max_filesize 10M
+php_value post_max_size 10M
+php_value max_execution_time 300
+
+# Error pages
+ErrorDocument 404 /404.php
+ErrorDocument 500 /500.php
