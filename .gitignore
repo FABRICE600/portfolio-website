@@ -1,0 +1,13 @@
+# Sensitive config with database passwords
+includes/config.php
+
+# Uploaded files
+assets/uploads/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
